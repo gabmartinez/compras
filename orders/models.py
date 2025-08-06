@@ -99,9 +99,34 @@ class Order(models.Model):
         verbose_name=_("Unit of Measure"),
     )
     unit_price = models.DecimalField(
-        max_digits=10, decimal_places=2, verbose_name=_("Unit Price"), default=0.00, validators=[MinValueValidator(0)]
+        max_digits=10,
+        decimal_places=2,
+        verbose_name=_("Unit Price"),
+        default=0.00,
+        validators=[MinValueValidator(0)],
+    )
+    accounting_entry_number = models.CharField(
+        max_length=75,
+        blank=True,
+        null=True,
+        editable=False,
+        verbose_name=_("Accounting Entry Number"),
     )
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
 
     def __str__(self):
         return f"Order #{self.id}"
+
+    @property
+    def total_price(self):
+        return self.unit_price * self.quantity
+
+
+class UnpublishedOrder(Order):
+    class Meta:
+        verbose_name = _("Unpublished Order")
+        verbose_name_plural = _("Unpublished Orders")
+        proxy = True
+
+    def __str__(self):
+        return f"Unpublished Order #{self.id}"

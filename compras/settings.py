@@ -141,3 +141,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+### Custom settings
+ACCOUNTING_SERVICE_URL = "http://3.80.223.142:3001/api/public/entradas-contables"
+ACCOUNTING_API_KEY = "ak_live_de21c77b84b9535c004f8f6d61959cfe2aa1370565aa36ab"
+ACCOUNTING_ACCOUNT_ID = 80
+ACCOUNTING_AUXILIARY_ID = 7
+ACCOUNTING_MOVEMENT_TYPE = "DB"
