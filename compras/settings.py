@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,10 +78,10 @@ WSGI_APPLICATION = "compras.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "mssql",
-        "NAME": "master",
-        "USER": "sa",
-        "PASSWORD": "P@55w0rd",
-        "HOST": "localhost",
+        "NAME": os.environ.get("DATABASE_NAME", "master"),
+        "USER": os.environ.get("DATABASE_USER", "sa"),
+        "PASSWORD": os.environ.get("DATABASE_PASSWORD", "P@55w0rd"),
+        "HOST": os.environ.get("DATABASE_HOST", "localhost"),
         "PORT": "1433",
         "OPTIONS": {
             "driver": "ODBC Driver 18 for SQL Server",
@@ -144,8 +145,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 ### Custom settings
-ACCOUNTING_SERVICE_URL = "http://3.80.223.142:3001/api/public/entradas-contables"
-ACCOUNTING_API_KEY = "ak_live_de21c77b84b9535c004f8f6d61959cfe2aa1370565aa36ab"
-ACCOUNTING_ACCOUNT_ID = 80
-ACCOUNTING_AUXILIARY_ID = 7
-ACCOUNTING_MOVEMENT_TYPE = "DB"
+ACCOUNTING_SERVICE_URL = os.environ.get(
+    "ACCOUNTING_SERVICE_URL", "https://localhost:8000/api/accounts/"
+)
+ACCOUNTING_API_KEY = os.environ.get("ACCOUNTING_API_KEY", "super-secret-key")
+ACCOUNTING_ACCOUNT_ID = os.environ.get("ACCOUNTING_ACCOUNT_ID", 80)
+ACCOUNTING_AUXILIARY_ID = os.environ.get("ACCOUNTING_AUXILIARY_ID", 7)
+ACCOUNTING_MOVEMENT_TYPE = os.environ.get("ACCOUNTING_MOVEMENT_TYPE", "DB")
