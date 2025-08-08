@@ -118,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "es-DO"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Santo_Domingo"
 
 USE_I18N = True
 
@@ -137,6 +137,10 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = Path(BASE_DIR).joinpath("staticfiles")
+STATICFILES_DIRS = (Path(BASE_DIR).joinpath("static"),)
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
