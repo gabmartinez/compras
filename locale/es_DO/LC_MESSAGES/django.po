@@ -76,7 +76,7 @@ msgstr "Marca"
 #, fuzzy
 #| msgid "Brand"
 msgid "Brands"
-msgstr "Marca"
+msgstr "Marcas"
 
 #: orders/models.py:39 orders/models.py:84 orders/models.py:119
 msgid "Unit of Measure"
@@ -86,7 +86,7 @@ msgstr "Unidad de Medida"
 #, fuzzy
 #| msgid "Unit of Measure"
 msgid "Units of Measure"
-msgstr "Unidad de Medida"
+msgstr "Unidad de Medidas"
 
 #: orders/models.py:47
 msgid "Juridical"
@@ -112,7 +112,7 @@ msgstr "Proveedor"
 #, fuzzy
 #| msgid "Provider"
 msgid "Providers"
-msgstr "Proveedor"
+msgstr "Proveedors"
 
 #: orders/models.py:86
 msgid "Stock"
@@ -126,7 +126,7 @@ msgstr "Artículo"
 #, fuzzy
 #| msgid "Article"
 msgid "Articles"
-msgstr "Artículo"
+msgstr "Artículos"
 
 #: orders/models.py:99
 msgid "Order Number"
@@ -152,13 +152,13 @@ msgstr "Número de Asiento Contable"
 #, fuzzy
 #| msgid "Order Date"
 msgid "Order"
-msgstr "Fecha de Orden"
+msgstr "Orden"
 
 #: orders/models.py:139
 #, fuzzy
 #| msgid "Order Date"
 msgid "Orders"
-msgstr "Fecha de Orden"
+msgstr "Ordenes"
 
 #: orders/models.py:151
 msgid "Unpublished Order"
