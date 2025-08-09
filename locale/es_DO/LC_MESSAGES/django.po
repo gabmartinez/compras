@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-09 06:46-0400\n"
+"POT-Creation-Date: 2025-08-09 07:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: orders/admin.py:115
+#: orders/admin.py:116
 msgid "Publish selected Orders to Accounting System"
 msgstr "Publicar órdenes seleccionadas en el sistema contable"
 
-#: orders/admin.py:157
+#: orders/admin.py:158
 #, python-brace-format
 msgid "{count} orders successfully published to the accounting system."
 msgstr "{count} órdenes publicadas exitosamente en el sistema contable."
 
-#: orders/admin.py:164
+#: orders/admin.py:165
 #, python-brace-format
 msgid "{count} orders failed to publish to the accounting system."
 msgstr "{count} órdenes no se pudieron publicar en el sistema contable."
@@ -47,79 +47,123 @@ msgstr "La cantidad no puede exceder el stock disponible."
 msgid "Export selected as CSV"
 msgstr "Exportar seleccionados como CSV"
 
-#: orders/models.py:7 orders/models.py:43
+#: orders/models.py:7 orders/models.py:55
 msgid "Name"
 msgstr "Nombre"
 
-#: orders/models.py:8 orders/models.py:18 orders/models.py:28
-#: orders/models.py:50 orders/models.py:71 orders/models.py:115
+#: orders/models.py:8 orders/models.py:22 orders/models.py:36
+#: orders/models.py:62 orders/models.py:87 orders/models.py:135
 msgid "Status"
 msgstr "Estado"
 
-#: orders/models.py:16 orders/models.py:26 orders/models.py:57
+#: orders/models.py:11
+msgid "Department"
+msgstr "Departamento"
+
+#: orders/models.py:12
+msgid "Departments"
+msgstr "Departamentos"
+
+#: orders/models.py:20 orders/models.py:34 orders/models.py:73
 msgid "Description"
 msgstr "Descripción"
 
-#: orders/models.py:35
-msgid "Juridical"
-msgstr "RNC"
-
-#: orders/models.py:36
-msgid "Physical"
-msgstr "Cédula"
-
-#: orders/models.py:41
-msgid "Document Number"
-msgstr "Número de Documento"
-
-#: orders/models.py:48
-msgid "Person Type"
-msgstr "Tipo"
-
-#: orders/models.py:62
+#: orders/models.py:25 orders/models.py:78
 msgid "Brand"
 msgstr "Marca"
 
-#: orders/models.py:68 orders/models.py:99
+#: orders/models.py:26
+#, fuzzy
+#| msgid "Brand"
+msgid "Brands"
+msgstr "Marca"
+
+#: orders/models.py:39 orders/models.py:84 orders/models.py:119
 msgid "Unit of Measure"
 msgstr "Unidad de Medida"
 
-#: orders/models.py:70
-msgid "Stock"
-msgstr "Inventario"
+#: orders/models.py:40
+#, fuzzy
+#| msgid "Unit of Measure"
+msgid "Units of Measure"
+msgstr "Unidad de Medida"
 
-#: orders/models.py:79
-msgid "Order Number"
-msgstr "Número de Orden"
+#: orders/models.py:47
+msgid "Juridical"
+msgstr "RNC"
 
-#: orders/models.py:81
-msgid "Order Date"
-msgstr "Fecha de Orden"
+#: orders/models.py:48
+msgid "Physical"
+msgstr "Cédula"
 
-#: orders/models.py:86
+#: orders/models.py:53
+msgid "Document Number"
+msgstr "Número de Documento"
+
+#: orders/models.py:60
+msgid "Person Type"
+msgstr "Tipo"
+
+#: orders/models.py:65 orders/models.py:106
 msgid "Provider"
 msgstr "Proveedor"
 
-#: orders/models.py:92
+#: orders/models.py:66
+#, fuzzy
+#| msgid "Provider"
+msgid "Providers"
+msgstr "Proveedor"
+
+#: orders/models.py:86
+msgid "Stock"
+msgstr "Inventario"
+
+#: orders/models.py:90 orders/models.py:112
 msgid "Article"
 msgstr "Artículo"
 
-#: orders/models.py:94
+#: orders/models.py:91
+#, fuzzy
+#| msgid "Article"
+msgid "Articles"
+msgstr "Artículo"
+
+#: orders/models.py:99
+msgid "Order Number"
+msgstr "Número de Orden"
+
+#: orders/models.py:101
+msgid "Order Date"
+msgstr "Fecha de Orden"
+
+#: orders/models.py:114
 msgid "Quantity"
 msgstr "Cantidad"
 
-#: orders/models.py:104
+#: orders/models.py:124
 msgid "Unit Price"
 msgstr "Precio Unitario"
 
-#: orders/models.py:113
+#: orders/models.py:133
 msgid "Accounting Entry Number"
-msgstr "Número de Entrada Contable"
+msgstr "Número de Asiento Contable"
 
-#: orders/models.py:127
+#: orders/models.py:138
+#, fuzzy
+#| msgid "Order Date"
+msgid "Order"
+msgstr "Fecha de Orden"
+
+#: orders/models.py:139
+#, fuzzy
+#| msgid "Order Date"
+msgid "Orders"
+msgstr "Fecha de Orden"
+
+#: orders/models.py:151
 msgid "Unpublished Order"
 msgstr "Orden No Publicada"
 
-#: orders/models.py:128
+#: orders/models.py:152
 msgid "Unpublished Orders"
 msgstr "Órdenes No Publicadas"
