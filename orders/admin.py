@@ -1,4 +1,5 @@
 import requests
+from daterangefilter.filters import PastDateRangeFilter
 from django.conf import settings
 from django.contrib import admin, messages
 from django.contrib.auth import get_permission_codename
@@ -73,7 +74,7 @@ class OrderAdmin(ExportAdminMixin, admin.ModelAdmin):
         "unit_measure",
     )
     search_fields = ("order_number", "accounting_entry_number")
-    list_filter = ("order_date", "provider", "article")
+    list_filter = (("order_date", PastDateRangeFilter), "provider", "article")
     ordering = ("-order_date",)
 
 
@@ -88,7 +89,7 @@ class UnpublishedOrderAdmin(ExportAdminMixin, admin.ModelAdmin):
         "unit_measure",
     )
     search_fields = ("order_number",)
-    list_filter = ("order_date", "provider", "article")
+    list_filter = (("order_date", PastDateRangeFilter), "provider", "article")
     ordering = ("-order_date",)
     actions = ["publish_to_accounting_action"]
 

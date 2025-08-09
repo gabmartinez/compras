@@ -7,6 +7,10 @@ class Department(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name=_("Name"))
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
 
+    class Meta:
+        verbose_name = _("Department")
+        verbose_name_plural = _("Departments")
+
     def __str__(self):
         return self.name
 
@@ -17,6 +21,10 @@ class Brand(models.Model):
     )
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
 
+    class Meta:
+        verbose_name = _("Brand")
+        verbose_name_plural = _("Brands")
+
     def __str__(self):
         return self.description
 
@@ -26,6 +34,10 @@ class UnitMeasure(models.Model):
         max_length=150, unique=True, verbose_name=_("Description")
     )
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
+
+    class Meta:
+        verbose_name = _("Unit of Measure")
+        verbose_name_plural = _("Units of Measure")
 
     def __str__(self):
         return self.description
@@ -49,6 +61,10 @@ class Provider(models.Model):
     )
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
 
+    class Meta:
+        verbose_name = _("Provider")
+        verbose_name_plural = _("Providers")
+
     def __str__(self):
         return self.name
 
@@ -69,6 +85,10 @@ class Article(models.Model):
     )
     stock = models.PositiveIntegerField(default=0, verbose_name=_("Stock"))
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
+
+    class Meta:
+        verbose_name = _("Article")
+        verbose_name_plural = _("Articles")
 
     def __str__(self):
         return self.description
@@ -113,6 +133,10 @@ class Order(models.Model):
         verbose_name=_("Accounting Entry Number"),
     )
     is_active = models.BooleanField(default=True, verbose_name=_("Status"))
+
+    class Meta:
+        verbose_name = _("Order")
+        verbose_name_plural = _("Orders")
 
     def __str__(self):
         return f"Order #{self.id}"
