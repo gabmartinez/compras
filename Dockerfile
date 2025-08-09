@@ -16,10 +16,10 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY . .
+
 RUN python manage.py collectstatic --noinput
 
 RUN python manage.py compilemessages
-
-COPY . .
 
 CMD ["gunicorn", "--worker-tmp-dir", "/dev/shm", "compras.wsgi"]
