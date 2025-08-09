@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-09 06:46-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: orders/admin.py:115
+msgid "Publish selected Orders to Accounting System"
+msgstr "Publicar órdenes seleccionadas en el sistema contable"
+
+#: orders/admin.py:157
+#, python-brace-format
+msgid "{count} orders successfully published to the accounting system."
+msgstr "{count} órdenes publicadas exitosamente en el sistema contable."
+
+#: orders/admin.py:164
+#, python-brace-format
+msgid "{count} orders failed to publish to the accounting system."
+msgstr "{count} órdenes no se pudieron publicar en el sistema contable."
+
+#: orders/forms.py:24 orders/forms.py:29
+msgid "The document number is invalid."
+msgstr "El número de documento es inválido."
+
+#: orders/forms.py:44
+msgid "The quantity must be greater than zero."
+msgstr "La cantidad debe ser mayor que cero."
+
+#: orders/forms.py:49
+msgid "The quantity cannot exceed the available stock."
+msgstr "La cantidad no puede exceder el stock disponible."
+
+#: orders/mixins.py:26
+msgid "Export selected as CSV"
+msgstr "Exportar seleccionados como CSV"
+
+#: orders/models.py:7 orders/models.py:43
+msgid "Name"
+msgstr "Nombre"
+
+#: orders/models.py:8 orders/models.py:18 orders/models.py:28
+#: orders/models.py:50 orders/models.py:71 orders/models.py:115
+msgid "Status"
+msgstr "Estado"
+
+#: orders/models.py:16 orders/models.py:26 orders/models.py:57
+msgid "Description"
+msgstr "Descripción"
+
+#: orders/models.py:35
+msgid "Juridical"
+msgstr "RNC"
+
+#: orders/models.py:36
+msgid "Physical"
+msgstr "Cédula"
+
+#: orders/models.py:41
+msgid "Document Number"
+msgstr "Número de Documento"
+
+#: orders/models.py:48
+msgid "Person Type"
+msgstr "Tipo"
+
+#: orders/models.py:62
+msgid "Brand"
+msgstr "Marca"
+
+#: orders/models.py:68 orders/models.py:99
+msgid "Unit of Measure"
+msgstr "Unidad de Medida"
+
+#: orders/models.py:70
+msgid "Stock"
+msgstr "Inventario"
+
+#: orders/models.py:79
+msgid "Order Number"
+msgstr "Número de Orden"
+
+#: orders/models.py:81
+msgid "Order Date"
+msgstr "Fecha de Orden"
+
+#: orders/models.py:86
+msgid "Provider"
+msgstr "Proveedor"
+
+#: orders/models.py:92
+msgid "Article"
+msgstr "Artículo"
+
+#: orders/models.py:94
+msgid "Quantity"
+msgstr "Cantidad"
+
+#: orders/models.py:104
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#: orders/models.py:113
+msgid "Accounting Entry Number"
+msgstr "Número de Entrada Contable"
+
+#: orders/models.py:127
+msgid "Unpublished Order"
+msgstr "Orden No Publicada"
+
+#: orders/models.py:128
+msgid "Unpublished Orders"
+msgstr "Órdenes No Publicadas"
