@@ -4,4 +4,4 @@ pyodbc==5.2.0
 mssql-django==1.5
 requests==2.32.4
 whitenoise==6.9.0
-django-daterangefilter @ git+https://github.com/gabmartinez/django-daterangefilter.git@master
+django-daterangefilter==1.0.1
