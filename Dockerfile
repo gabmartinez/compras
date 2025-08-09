@@ -2,8 +2,10 @@ FROM python:3.11-slim
 
 RUN apt-get update && \
     apt-get install -y curl gnupg2 unixodbc-dev gcc && \
-    curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
-    echo "deb [arch=amd64] https://packages.microsoft.com/debian/bullseye/prod bullseye main" > /etc/apt/sources.list.d/mssql-release.list && \
+    export DEBVER=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1) && \
+    curl -sSL -O https://packages.microsoft.com/config/debian/$DEBVER/packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    rm packages-microsoft-prod.deb && \
     apt-get update && \
     ACCEPT_EULA=Y apt-get install -y msodbcsql18 && \
     apt-get clean && \
